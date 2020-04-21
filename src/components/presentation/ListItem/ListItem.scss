@@ -1,0 +1,101 @@
+.flex-item {
+  height: 30rem;
+  width: 20rem;
+  border: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  transition: ease-in-out 1s all;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 10px 20px rgba(black, 0.2);
+  }
+
+  &_container {
+    margin: 0.5rem;
+    transition: ease-in-out 1s all;
+
+    &-img {
+      height: 19rem;
+      width: 100%;
+      transition: ease-in-out 1s all;
+    }
+
+    &-intro {
+      width: 100%;
+      height: 4.5rem;
+      position: relative;
+      top: -4.65rem;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    &-name {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.3rem;
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: white;
+      width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-creation {
+      position: absolute;
+      color: white;
+      top: 2.2rem;
+      left: 0.5rem;
+    }
+
+    &-detail {
+      width: 100%;
+      height: 10rem;
+      position: relative;
+      font-size: 0.8rem;
+      top: -4.65rem;
+      background: #d3d3d380;
+
+      &-status {
+        position: relative;
+        top: 1rem;
+      }
+
+      &-species {
+        position: relative;
+        top: 3rem;
+      }
+
+      &-gender {
+        position: relative;
+        top: 5rem;
+      }
+
+      &-origin {
+        position: relative;
+        top: 7rem;
+      }
+
+      &-location {
+        position: relative;
+        top: 9rem;
+      }
+
+      &-title {
+        left: 1rem;
+        position: absolute;
+        color: white;
+      }
+
+      &-value {
+        right: 0.5rem;
+        position: absolute;
+        color: gold;
+      }
+    }
+  }
+}

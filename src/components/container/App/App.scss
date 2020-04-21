@@ -1,0 +1,51 @@
+.main {
+  background: linear-gradient(to right, #3e5151, #decba4);
+  width: 100vw;
+  position: relative;
+  top: 0;
+  color: white;
+
+  &_heading {
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  &_functionality {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    transition: ease-in-out 1s all;
+    padding-top: 5rem;
+
+    &-species {
+      width: 100%;
+    }
+  }
+
+  &_input {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+.viewcontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  transition: ease-in-out 1s all;
+  position: relative;
+  top: 9rem;
+}
+
+.sortBox {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
