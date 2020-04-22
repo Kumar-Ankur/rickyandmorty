@@ -1,3 +1,4 @@
+// All action types are listed here:
 export const GET_CHARACTERS = 'GET_CHARACTERS';
 export const GET_CHARACTERS_ASYNC = 'GET_CHARACTERS_ASYNC';
 export const GET_FILTERED_DATA = 'GET_FILTERED_DATA';

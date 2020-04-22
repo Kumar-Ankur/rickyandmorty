@@ -1,3 +1,4 @@
+// END POINT URL for data fetching
 export const ENDPOINT_URL = 'https://rickandmortyapi.com/api/character/';
 
 // App component

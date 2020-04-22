@@ -35,7 +35,7 @@ class GenderView extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    all_characters: state.all_characters,
+    all_characters: state.character.all_characters,
   };
 };
 

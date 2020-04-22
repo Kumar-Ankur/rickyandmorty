@@ -132,11 +132,11 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    all_characters: state.all_characters,
-    filter_data: state.filter_data,
-    filter_gender_data: state.filter_gender_data,
-    filter_origin_data: state.filter_origin_data,
-    search_text: state.search_text,
+    all_characters: state.character.all_characters,
+    filter_data: state.species.filter_data,
+    filter_gender_data: state.gender.filter_gender_data,
+    filter_origin_data: state.origin.filter_origin_data,
+    search_text: state.search.search_text,
   };
 };
 
