@@ -11,7 +11,6 @@ export function* getCharactersAsync() {
     const endpoint = constants.ENDPOINT_URL;
     const response = yield call(fetch, endpoint);
     const data = yield response.json();
-    console.log(data.results);
     yield all([
       put({ type: actionTypes.GET_CHARACTERS_ASYNC, payload: data.results }),
     ]);
