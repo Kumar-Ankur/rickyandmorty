@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bcab34a39efb0aac087c27399db6ffed",
+    "revision": "361a31c1e079e53db0422da9f6b1d230",
     "url": "/rickyandmorty/index.html"
   },
   {
-    "revision": "7dfb9e18a656b4ebc4c7",
+    "revision": "9df4f75f92ac527cf898",
     "url": "/rickyandmorty/static/css/main.73d769df.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rickyandmorty/static/js/2.d28ab0e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7dfb9e18a656b4ebc4c7",
-    "url": "/rickyandmorty/static/js/main.96cbe625.chunk.js"
+    "revision": "9df4f75f92ac527cf898",
+    "url": "/rickyandmorty/static/js/main.4e29a4eb.chunk.js"
   },
   {
     "revision": "57564d69cbe11d9cf311",
