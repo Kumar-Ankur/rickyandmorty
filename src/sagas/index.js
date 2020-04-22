@@ -17,7 +17,7 @@ export function* getCharactersAsync() {
     ]);
   } catch (error) {
     console.log(error);
-    // yield put({ type: 'REQUESTED_DATA_ERROR'})
+    yield put({ type: actionTypes.REQUESTED_DATA_ERROR, payload: constants.REQUESTED_DATA_ERROR_TEXT })
   }
 }
 

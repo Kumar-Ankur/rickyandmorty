@@ -2,6 +2,13 @@
 .accordion__section {
   display: flex;
   flex-direction: column;
+  transition: ease-in-out 1s all;
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .accordion__section {
+    margin-top: 3rem;
+  }
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -33,6 +40,15 @@
   letter-spacing: 1px;
   color: white;
   margin-left: auto;
+}
+
+@media only screen and (max-width: 949px) and (min-width: 550px),
+  only screen and (max-width: 549px) and (min-width: 400px),
+  only screen and (max-width: 399px) and (min-width: 350px),
+  only screen and (max-width: 349px) {
+  .accordion__title {
+    font-size: .8rem;
+  }
 }
 
 /* Style the accordion chevron icon */

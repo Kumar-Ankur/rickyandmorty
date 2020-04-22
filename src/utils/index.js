@@ -19,7 +19,7 @@ export const getCreatedYear = (createdDate) => {
 export const getCheckBoxData = (charcters, data, isOrigin = false) => {
   let checkBoxData = [];
   charcters.map((item) => {
-    checkBoxData.push(isOrigin ? item[data].name : item[data]);
+    checkBoxData.push( item && (isOrigin ? item[data].name : item[data]));
     return checkBoxData;
   });
 

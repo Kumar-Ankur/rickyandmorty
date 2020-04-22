@@ -2,6 +2,7 @@ import * as actionTypes from "../types";
 
 const initialState = {
   all_characters: [],
+  error_text: ''
 };
 
 /**
@@ -16,7 +17,14 @@ export default (state = initialState, action) => {
       return {
         ...state,
         all_characters: state.all_characters.concat(action.payload),
+        error_text: ''
       };
+      case actionTypes.REQUESTED_DATA_ERROR:
+        return {
+          ...state,
+          all_characters: [],
+          error_text: action.payload
+        }
     case actionTypes.SORT_DATA_BY_ASCENDING:
       return {
         ...state,

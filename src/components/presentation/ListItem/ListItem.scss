@@ -45,11 +45,29 @@
       text-overflow: ellipsis;
     }
 
+    @media only screen and (max-width: 949px) and (min-width: 550px),
+      only screen and (max-width: 549px) and (min-width: 400px),
+      only screen and (max-width: 399px) and (min-width: 350px),
+      only screen and (max-width: 349px) {
+      &-name {
+        font-size: 0.8rem;
+      }
+    }
+
     &-creation {
       position: absolute;
       color: white;
       top: 2.2rem;
       left: 0.5rem;
+    }
+
+    @media only screen and (max-width: 949px) and (min-width: 550px),
+      only screen and (max-width: 549px) and (min-width: 400px),
+      only screen and (max-width: 399px) and (min-width: 350px),
+      only screen and (max-width: 349px) {
+      &-creation {
+        font-size: 0.8rem;
+      }
     }
 
     &-detail {
@@ -91,11 +109,88 @@
         color: white;
       }
 
+      @media only screen and (max-width: 949px) and (min-width: 550px),
+        only screen and (max-width: 549px) and (min-width: 400px),
+        only screen and (max-width: 399px) and (min-width: 350px),
+        only screen and (max-width: 349px) {
+        &-title {
+          left: 0.1rem;
+        }
+      }
+
+      @media only screen and (max-width: 949px) and (min-width: 550px),
+        only screen and (max-width: 549px) and (min-width: 400px),
+        only screen and (max-width: 399px) and (min-width: 350px),
+        only screen and (max-width: 349px) {
+        &-title {
+          font-size: 0.6rem;
+        }
+      }
+
       &-value {
         right: 0.5rem;
         position: absolute;
         color: gold;
       }
+
+      @media only screen and (max-width: 949px) and (min-width: 550px),
+        only screen and (max-width: 549px) and (min-width: 400px),
+        only screen and (max-width: 399px) and (min-width: 350px),
+        only screen and (max-width: 349px) {
+        &-value {
+          display: inline-block;
+          width: 50%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          right: 0.1rem;
+        }
+      }
+
+      @media only screen and (max-width: 949px) and (min-width: 550px),
+        only screen and (max-width: 549px) and (min-width: 400px),
+        only screen and (max-width: 399px) and (min-width: 350px),
+        only screen and (max-width: 349px) {
+        &-value {
+          font-size: 0.6rem;
+          right: -10px;
+        }
+      }
     }
+  }
+}
+
+@media only screen and (max-width: 949px) and (min-width: 550px),
+  only screen and (max-width: 549px) and (min-width: 400px),
+  only screen and (max-width: 399px) and (min-width: 350px),
+  only screen and (max-width: 349px) {
+  .flex-item {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 949px) and (min-width: 550px),
+  only screen and (max-width: 549px) and (min-width: 400px),
+  only screen and (max-width: 399px) and (min-width: 350px),
+  only screen and (max-width: 349px) {
+  .flex-item {
+    width: 9rem;
+  }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .flex-item {
+    width: 10rem;
+  }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1365px) {
+  .flex-item {
+    width: 14rem;
   }
 }

@@ -1,34 +1,45 @@
 .footer_container {
-    width: 100vw;
-    height: 20vh;
-    background: black;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: -7rem;
-  }
-  
-  .footer_heading {
-    color: white;
-    font-family: "AccoladeTOTMed W01 Regular";
-    position: relative;
-    top: 35px;
-    font-size: 1.2rem;
-  }
+  width: 100vw;
+  height: 20vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: -7rem;
+}
 
+.footer_heading {
+  color: white;
+  font-family: "AccoladeTOTMed W01 Regular";
+  position: relative;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 949px) and (min-width: 550px),
+  only screen and (max-width: 549px) and (min-width: 400px),
+  only screen and (max-width: 399px) and (min-width: 350px),
+  only screen and (max-width: 349px) {
+  .footer_heading {
+    top: 0;
+    font-size: 1rem;
+    left: .2rem;
+  }
+}
+
+.footer_link {
+  color: gold;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 949px) and (min-width: 550px),
+  only screen and (max-width: 549px) and (min-width: 400px),
+  only screen and (max-width: 399px) and (min-width: 350px),
+  only screen and (max-width: 349px) {
   .footer_link {
-      color: gold;
-      margin-left: 2rem;
-      text-transform: uppercase;
-      font-weight: normal;
+    margin-left: 0;
   }
-  
-  @media only screen and (max-width: 949px) and (min-width: 550px),
-    only screen and (max-width: 549px) and (min-width: 400px),
-    only screen and (max-width: 399px) and (min-width: 350px),
-    only screen and (max-width: 349px) {
-    .footer_heading {
-    //   font-size: 1rem;
-    //   top: 25px;
-    }
-  }
+}
+
+

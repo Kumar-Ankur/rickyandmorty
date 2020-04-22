@@ -8,7 +8,8 @@ const Footer = () => {
       <h2 className="footer_heading">
         {constanst.FOOTER_HEADING} <br />
         <br />
-        {constanst.FOOTER_SUB_HEADING}{" "}
+        <span style={{ position: 'absolute', top: '2rem'}}>{constanst.FOOTER_SUB_HEADING}{" "}</span>
+        <br />
         <a href="http://kumarankur.in/" target="_blank" rel="noopener noreferrer" className="footer_link">
           {constanst.FOOTER_LINK}
         </a>

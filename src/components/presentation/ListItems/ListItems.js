@@ -5,7 +5,7 @@ const ListItems = (props) => {
   const { filteredItem } = props;
 
   return filteredItem.map((item, indx) => {
-    return <ListItem item={item} indx={indx} />;
+    return <ListItem key={indx} item={item} indx={indx} />;
   });
 };
 

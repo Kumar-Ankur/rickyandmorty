@@ -18,12 +18,12 @@ class App extends Component {
     this.props.getCharacters();
   }
 
-/**
- * @function getSearchData
- * @param { Object } filteredOriginItem
- * @description - function to filtered out data based on search text
- * @returns { Object } - return the filtered data based on search text by user
- */
+  /**
+   * @function getSearchData
+   * @param { Object } filteredOriginItem
+   * @description - function to filtered out data based on search text
+   * @returns { Object } - return the filtered data based on search text by user
+   */
   getSearchData = (filteredOriginItem) => {
     const { search_text } = this.props;
     let filteredSearchItem =
@@ -36,12 +36,12 @@ class App extends Component {
     return filteredSearchItem;
   };
 
-/**
- * @function getOriginFilter
- * @param { Object } filteredGenderItem
- * @description - function to filtered out data based on origin 
- * @returns { Object } - return the filtered data based on Origin value
- */
+  /**
+   * @function getOriginFilter
+   * @param { Object } filteredGenderItem
+   * @description - function to filtered out data based on origin
+   * @returns { Object } - return the filtered data based on Origin value
+   */
   getOriginFilter = (filteredGenderItem) => {
     const { filter_origin_data } = this.props;
     const filteredOriginItem =
@@ -54,12 +54,12 @@ class App extends Component {
     return this.getSearchData(filteredOriginItem);
   };
 
-/**
- * @function getGenderFilter
- * @param { Object } filteredItem
- * @description - function to filtered out data based on gender 
- * @returns { Object } - return the filtered data based on gender value
- */
+  /**
+   * @function getGenderFilter
+   * @param { Object } filteredItem
+   * @description - function to filtered out data based on gender
+   * @returns { Object } - return the filtered data based on gender value
+   */
   getGenderFilter = (filteredItem) => {
     const { filter_gender_data } = this.props;
     let filteredGenderItem =
@@ -72,13 +72,13 @@ class App extends Component {
     return this.getOriginFilter(filteredGenderItem);
   };
 
-/**
- * @function getSpeciesFilter
- * @param { Object } all_characters
- * @param { Array } filter_data
- * @description - function to filtered out data based on species 
- * @returns { Object } - return the filtered data based on species value
- */
+  /**
+   * @function getSpeciesFilter
+   * @param { Object } all_characters
+   * @param { Array } filter_data
+   * @description - function to filtered out data based on species
+   * @returns { Object } - return the filtered data based on species value
+   */
   getSpeciesFilter = (all_characters, filter_data) => {
     let filteredItem =
       filter_data.length > 0
@@ -90,10 +90,10 @@ class App extends Component {
     return this.getGenderFilter(filteredItem);
   };
 
-/**
- * @function getFilteredItem
- * @description - function to return final filtered data based on species, origin, gender and search text.
- */
+  /**
+   * @function getFilteredItem
+   * @description - function to return final filtered data based on species, origin, gender and search text.
+   */
   getFilteredItem = () => {
     const { all_characters, filter_data } = this.props;
     return this.getSpeciesFilter(all_characters, filter_data);
@@ -101,30 +101,27 @@ class App extends Component {
 
   render() {
     let filteredItem = this.getFilteredItem();
-
     return (
       <div className="main">
         <div className="main_heading">{constants.APP_HEADING}</div>
-        <div className="sortBox">
-          <SortButton />
-        </div>
-        <div className="main_functionality">
-          <div className="main_functionality-species">
-            <Accordion
-              title={ constants.ACCORDION_TEXT}
-              content={[<SpeciesView />, <GenderView />, <OriginView />]}
-            />
-          </div>
-        </div>
-
-        <div className="main_input">
-          <SearchView />
-        </div>
-
-        <div className="viewcontent">
-          <ListItems filteredItem={filteredItem} />
-        </div>
-        <Footer />
+            <div className="sortBox">
+              <SortButton />
+            </div>
+            <div className="main_functionality">
+              <div className="main_functionality-species">
+                <Accordion
+                  title={constants.ACCORDION_TEXT}
+                  content={[<SpeciesView />, <GenderView />, <OriginView />]}
+                />
+              </div>
+            </div>
+            <div className="main_input">
+              <SearchView />
+            </div>
+            <div className="viewcontent">
+              <ListItems filteredItem={filteredItem} />
+            </div>
+            <Footer />
       </div>
     );
   }

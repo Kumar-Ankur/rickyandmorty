@@ -1,5 +1,6 @@
 // END POINT URL for data fetching
 export const ENDPOINT_URL = 'https://rickandmortyapi.com/api/character/';
+export const REQUESTED_DATA_ERROR_TEXT = 'Something went wrong';
 
 // App component
 export const APP_HEADING = 'Rick and Morty Show';
