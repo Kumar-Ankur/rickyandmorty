@@ -83,6 +83,7 @@
   transition: ease-in-out 1s all;
 }
 
+// Media query for generic mobile screen
 @media only screen and (max-width: 949px) and (min-width: 550px),
   only screen and (max-width: 549px) and (min-width: 400px),
   only screen and (max-width: 399px) and (min-width: 350px),
@@ -93,6 +94,7 @@
   }
 }
 
+// Media query for galaxy
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .sortBox {
     width: 100%;
@@ -100,6 +102,7 @@
   }
 }
 
+// Media query for small screen mobile device
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .sortBox {
     width: 100%;
@@ -107,12 +110,14 @@
   }
 }
 
+// Media query for ipad
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .sortBox {
     left: 15rem;
   }
 }
 
+// Media query for ipad pro
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1365px) {
   .sortBox {
     left: 23rem;
