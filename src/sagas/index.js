@@ -14,6 +14,7 @@ export function* getCharactersAsync() {
     yield all([
       put({ type: actionTypes.GET_CHARACTERS_ASYNC, payload: data.results }),
     ]);
+    // yield put({ type: actionTypes.GET_CHARACTERS_ASYNC, payload: data.results  })
   } catch (error) {
     yield put({ type: actionTypes.REQUESTED_DATA_ERROR, payload: constants.REQUESTED_DATA_ERROR_TEXT })
   }

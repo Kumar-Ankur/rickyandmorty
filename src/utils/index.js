@@ -35,7 +35,9 @@ export const getCheckBoxData = (charcters, data, isOrigin = false) => {
 export const getFilteredData = (event, addFilteredData, removeFilteredData) => {
   if (event.target.checked) {
     addFilteredData(event.target.value);
+    return true;
   } else {
     removeFilteredData(event.target.value);
+    return false;
   }
 };
