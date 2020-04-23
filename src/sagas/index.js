@@ -15,7 +15,6 @@ export function* getCharactersAsync() {
       put({ type: actionTypes.GET_CHARACTERS_ASYNC, payload: data.results }),
     ]);
   } catch (error) {
-    console.error(error);
     yield put({ type: actionTypes.REQUESTED_DATA_ERROR, payload: constants.REQUESTED_DATA_ERROR_TEXT })
   }
 }
@@ -28,5 +27,6 @@ export function* getCharacters() {
   yield takeLatest("GET_CHARACTERS", getCharactersAsync);
 }
 export default function* rootSaga() {
-  yield all([getCharacters()]);
+  // yield all([getCharacters()]);
+  yield call(getCharacters);
 }
