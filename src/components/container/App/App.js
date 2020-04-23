@@ -102,12 +102,12 @@ class App extends Component {
   render() {
     let filteredItem = this.getFilteredItem();
     return (
-      <div className="main">
+      <div className="main" data-test='component-app'>
         <div className="main_heading">{constants.APP_HEADING}</div>
-            <div className="sortBox">
+            <div className="sortBox" data-test='component-sort'>
               <SortButton />
             </div>
-            <div className="main_functionality">
+            <div className="main_functionality" data-test='component-accordion'>
               <div className="main_functionality-species">
                 <Accordion
                   title={constants.ACCORDION_TEXT}
@@ -115,10 +115,10 @@ class App extends Component {
                 />
               </div>
             </div>
-            <div className="main_input">
+            <div className="main_input" data-test='component-search'>
               <SearchView />
             </div>
-            <div className="viewcontent">
+            <div className="viewcontent" data-test='component-content'>
               <ListItems filteredItem={filteredItem} />
             </div>
             <Footer />
