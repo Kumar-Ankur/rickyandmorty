@@ -1,7 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { applyMiddleware, createStore } from "redux";
-import { Provider } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "../../../../reducers";
 import App from "../App";

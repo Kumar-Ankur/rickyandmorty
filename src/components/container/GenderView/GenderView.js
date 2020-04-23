@@ -14,7 +14,7 @@ class GenderView extends Component {
 
     const getGenderBox = genderData.map((data, index) => {
       return (
-        <div key={index}>
+        <div key={index} data-test='container-checkbox'>
           <CheckBox
             data={data}
             addFilter={addGenderFilteredData}
@@ -25,9 +25,9 @@ class GenderView extends Component {
     });
 
     return (
-      <div className="species-content">
+      <div className="species-content" data-test='component-gender'>
         <h2>{ constants.GENDER_FILTER}</h2>
-        <form>{getGenderBox}</form>
+        <form data-test='component-gender-form'>{getGenderBox}</form>
       </div>
     );
   }
