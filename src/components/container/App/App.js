@@ -111,7 +111,7 @@ class App extends Component {
               <div className="main_functionality-species">
                 <Accordion
                   title={constants.ACCORDION_TEXT}
-                  content={[<SpeciesView key={Math.random()}/>, <GenderView key={Math.random()}/>, <OriginView key={Math.random()}/>]}
+                  content={[<SpeciesView key={1}/>, <GenderView key={2}/>, <OriginView key={3} />]}
                 />
               </div>
             </div>

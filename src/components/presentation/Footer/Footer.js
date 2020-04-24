@@ -4,7 +4,7 @@ import * as constanst from "../../../constants";
 
 const Footer = () => {
   return (
-    <div className="footer_container">
+    <div className="footer_container" data-test='component-footer'>
       <h2 className="footer_heading">
         {constanst.FOOTER_HEADING} <br />
         <br />

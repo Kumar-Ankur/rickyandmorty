@@ -16,8 +16,9 @@ const CheckBox = (props) => {
   return (
     <>
       <input
+        data-test="component-checkbox"
         type="checkbox"
-        id={data.id}
+        id={data}
         name={data}
         value={data}
         onClick={(e) => handlecheckBox(e)}

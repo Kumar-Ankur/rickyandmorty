@@ -3,6 +3,7 @@ import React from "react";
 function Chevron(props) {
   return (
     <svg
+      data-test="component-chevron"
       className={props.className}
       height={props.height}
       width={props.width}
