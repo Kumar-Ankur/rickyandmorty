@@ -14,7 +14,7 @@ class GenderView extends Component {
 
     const getGenderBox = genderData.map((data, index) => {
       return (
-        <div key={index} data-test='container-checkbox'>
+        <div key={index}>
           <CheckBox
             data={data}
             addFilter={addGenderFilteredData}
@@ -39,7 +39,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     addGenderFilteredData: (data) =>
       dispatch(actionCreator.addGenderFilteredData(data)),

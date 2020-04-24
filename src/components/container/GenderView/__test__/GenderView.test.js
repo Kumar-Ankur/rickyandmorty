@@ -1,9 +1,12 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
+import sinon from 'sinon';
 import { applyMiddleware, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "../../../../reducers";
 import GenderView from "../GenderView";
+import { mapDispatchToProps } from "../GenderView";
+import * as actionCreator from "../../../../actions";
 
 const middleware = createSagaMiddleware();
 const mockStore = createStore(rootReducer, applyMiddleware(middleware));
@@ -55,35 +58,23 @@ describe("check GenderView component", () => {
     expect(genderFormComponent.length).toBe(1);
   });
 
-  test("check `getCheckBoxData` call without error", () => {
-    const getCheckBoxDataMock = jest.fn();
-    const instance = wrapper.instance();
-    instance.getCheckBoxData = getCheckBoxDataMock;
-    instance.getCheckBoxData();
-    expect(getCheckBoxDataMock).toHaveBeenCalled();
+  test('check `addGenderFilteredData` function inside mapDispatchToProps', () => {
+    const dispatchSpy = sinon.spy();
+    mockStore.dispatch = dispatchSpy
+    const { addGenderFilteredData } = mapDispatchToProps(dispatchSpy);
+    addGenderFilteredData('Male');
+    const spyLastCall = dispatchSpy.args[0][0];
+    const expectedAction = actionCreator.addGenderFilteredData("Male")
+    expect(spyLastCall.types).toEqual(expectedAction.types);
   });
 
-  test("check `addGenderFilteredData` call without error", () => {
-    const addGenderFilteredDataMock = jest.fn();
-    const instance = wrapper.instance();
-    instance.addGenderFilteredData = addGenderFilteredDataMock;
-    instance.addGenderFilteredData();
-    expect(addGenderFilteredDataMock).toHaveBeenCalled();
-  });
-
-  test("check `removeGenderFilteredData` call without error", () => {
-    const removeGenderFilteredDataMock = jest.fn();
-    const instance = wrapper.instance();
-    instance.removeGenderFilteredData = removeGenderFilteredDataMock;
-    instance.removeGenderFilteredData();
-    expect(removeGenderFilteredDataMock).toHaveBeenCalled();
-  });
-
-  test("check `getGenderBox` call without error", () => {
-    const getGenderBoxMock = jest.fn();
-    const instance = wrapper.instance();
-    instance.getGenderBox = getGenderBoxMock;
-    instance.getGenderBox();
-    expect(getGenderBoxMock).toHaveBeenCalled();
+  test('check `removeGenderFilteredData` function inside mapDispatchToProps', () => {
+    const dispatchSpy = sinon.spy();
+    mockStore.dispatch = dispatchSpy
+    const { removeGenderFilteredData } = mapDispatchToProps(dispatchSpy);
+    removeGenderFilteredData('Male');
+    const spyLastCall = dispatchSpy.args[0][0];
+    const expectedAction = actionCreator.removeGenderFilteredData("Male")
+    expect(spyLastCall.types).toEqual(expectedAction.types);
   });
 });
