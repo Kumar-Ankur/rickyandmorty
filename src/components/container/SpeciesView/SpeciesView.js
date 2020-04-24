@@ -26,9 +26,9 @@ class SpeciesView extends Component {
     });
 
     return (
-      <div className="species-content">
+      <div className="species-content" data-test='component-species'>
           <h2>{ constants.SPECIES_FILTER }</h2>
-        <form>{getSpeciesBox}</form>
+        <form data-test='component-species-form'>{getSpeciesBox}</form>
       </div>
     );
   }
@@ -40,7 +40,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     addFilteredData: (data) => dispatch(actionCreator.addFilteredData(data)),
     removeFilteredData: (data) =>
