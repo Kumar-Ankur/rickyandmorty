@@ -15,7 +15,13 @@ function Accordion(props) {
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
     setHeightState(
-      setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
+      setActive === "active"
+        ? "0px"
+        : `${
+            content && content.current && content.current.scrollHeight
+              ? content.current.scrollHeight
+              : 0
+          }px`
     );
 
     setRotateState(
@@ -24,17 +30,24 @@ function Accordion(props) {
   }
 
   return (
-    <div className="accordion__section">
-      <button className="accordion" onClick={toggleAccordion}>
+    <div className="accordion__section" data-test="component-accordion">
+      <button
+        className="accordion"
+        onClick={toggleAccordion}
+        data-test="component-button"
+      >
         <p className="accordion__title">{props.title}</p>
         <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />
       </button>
       <div
+        data-test="component-accordion-content"
         ref={content}
         style={{ maxHeight: `${setHeight}` }}
         className="accordion__content"
       >
-        <div className="accordion__text">{props.content}</div>
+        <div className="accordion__text" data-test="component-accordion-text">
+          {props.content}
+        </div>
       </div>
     </div>
   );
