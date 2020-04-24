@@ -9,6 +9,7 @@ class SortButton extends Component {
     return (
       <>
         <button
+          data-test="component-btn-asc"
           onClick={() => this.props.sortAscendingById()} // dispatch an action to sort data based on id in ascending order
           type="submit"
           className="btn btn--animated btn--white"
@@ -17,6 +18,7 @@ class SortButton extends Component {
           {constants.SORT_ASCENDING_TEXT}
         </button>
         <button
+          data-test="component-btn-desc"
           onClick={() => this.props.sortDescendingById()} // dispatch an action to sort data based on id in descending order
           type="submit"
           className="btn btn--animated btn--white"
@@ -28,7 +30,7 @@ class SortButton extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     sortAscendingById: () => dispatch(actionCreator.sortAscendingById()),
     sortDescendingById: () => dispatch(actionCreator.sortDescendingById()),
