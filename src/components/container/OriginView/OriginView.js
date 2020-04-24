@@ -25,9 +25,9 @@ class OriginView extends Component {
     });
 
     return (
-      <div className="species-content">
+      <div className="species-content" data-test='component-origin'>
           <h2>{ constants.ORIGIN_FILTER }</h2>
-        <form>{getOriginBox}</form>
+        <form data-test = 'component-origin-form'>{getOriginBox}</form>
       </div>
     );
   }
@@ -39,7 +39,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     addOriginFilteredData: (data) => dispatch(actionCreator.addOriginFilteredData(data)),
     removeOriginFilteredData: (data) =>

@@ -18,7 +18,6 @@ const mockStore = createStore(rootReducer, applyMiddleware(middleware));
  * @returns { shallowWrapper }
  *
  */
-
 function setUp(props = {}) {
   const wrapper = shallow(<GenderView store={mockStore} {...props} />);
   return wrapper;
