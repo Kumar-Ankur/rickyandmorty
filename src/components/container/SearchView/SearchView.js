@@ -5,12 +5,11 @@ import * as constants from "../../../constants";
 import "./SearchView.scss";
 
 class SearchView extends Component {
-
-/**
- * @function handleChange
- * @param { Object } event - window event object when user type any word in text box
- * @description - Dispatch action to reducer to update the search text state.
- */
+  /**
+   * @function handleChange
+   * @param { Object } event - window event object when user type any word in text box
+   * @description - Dispatch action to reducer to update the search text state.
+   */
   handleChange = (event) => {
     const { addSearchText } = this.props;
     // dispatch the event to update the search text state.
@@ -18,8 +17,9 @@ class SearchView extends Component {
   };
   render() {
     return (
-      <div className="form__group field">
+      <div className="form__group field" data-test="component-search">
         <input
+          data-test="component-input"
           type="input"
           className="form__field"
           placeholder="Name"
@@ -29,14 +29,14 @@ class SearchView extends Component {
           required
         />
         <label htmlFor="name" className="form__label">
-          { constants.NAME }
+          {constants.NAME}
         </label>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+export const mapDispatchToProps = (dispatch) => {
   return {
     addSearchText: (data) => dispatch(actionCreator.addSearchText(data)),
   };
